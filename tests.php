@@ -2,16 +2,20 @@
 
 class Tests extends PHPUnit_Framework_TestCase
 {
-	public $manifest =  __DIR__ . '/manifest.json';
+	public $manifest = __DIR__ . '/manifest.json';
+
+	public $manifest_min = __DIR__ . '/manifest.min.json';
 
 	public function testExists()
 	{
 		$this->assertTrue( is_readable( $this->manifest ) );
+		$this->assertTrue( is_readable( $this->manifest_min ) );
 	}
 
 	public function testJson()
 	{
 		$this->assertJson( (string) file_get_contents( $this->manifest ) );
+		$this->assertJson( (string) file_get_contents( $this->manifest_min ) );
 	}
 
 	public function testData()
@@ -39,5 +43,13 @@ class Tests extends PHPUnit_Framework_TestCase
 			$this->assertContains( "/v{$data->new_version}/", $data->package );
 			$this->assertStringEndsWith( "/{$data->theme}.zip", $data->package );
 		}
+	}
+
+	public function testMatch()
+	{
+		$manifest     = json_decode( (string) file_get_contents( $this->manifest ), true );
+		$manifest_min = json_decode( (string) file_get_contents( $this->manifest_min ), true );
+
+		$this->assertTrue( $manifest === $manifest_min );
 	}
 }
