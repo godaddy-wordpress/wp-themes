@@ -1,4 +1,8 @@
-language: php
+language:
+  - php
+
 php:
   - 7.1
-script: phpunit tests.php
+
+script:
+  - phpunit tests.php --colors --debug --no-globals-backup
