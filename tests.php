@@ -1,6 +1,8 @@
 <?php
 
-class Tests extends PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class Tests extends TestCase
 {
 	public static $manifest     = __DIR__ . '/manifest.json';
 	public static $manifest_min = __DIR__ . '/manifest.min.json';
