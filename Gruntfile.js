@@ -23,7 +23,7 @@ module.exports = function( grunt ) {
 		},
 
 		jshint: {
-			gruntfile: [ 'Gruntfile.js' ]
+			gruntfile: [ 'Gruntfile.js']
 		},
 
 		jsonlint: {
