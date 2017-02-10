@@ -7,21 +7,36 @@ module.exports = function( grunt ) {
 	grunt.initConfig( {
 
 		devUpdate: {
-			options: {
-				updateType: 'force',
-				reportUpdated: false,
-				semver: true,
-				packages: {
-					devDependencies: true,
-					dependencies: false
-				},
-				packageJson: null,
-				reportOnlyPkgs: []
+			packages: {
+				options: {
+					packageJson: null,
+					packages: {
+						devDependencies: true,
+						dependencies: false
+					},
+					reportOnlyPkgs: [],
+					reportUpdated: false,
+					semver: true,
+					updateType: 'force'
+				}
 			}
 		},
 
 		jshint: {
-			all: [ 'Gruntfile.js', 'manifest.json' ]
+			gruntfile: [ 'Gruntfile.js' ]
+		},
+
+		jsonlint: {
+			options: {
+				format: false,
+				indent: 0
+			},
+			manifest: {
+				src: [ 'manifest.json' ]
+			},
+			min: {
+				src: [ 'manifest.min.json' ]
+			}
 		},
 
 		json_minification: {
@@ -36,6 +51,7 @@ module.exports = function( grunt ) {
 
 	require( 'matchdep' ).filterDev( 'grunt-*' ).forEach( grunt.loadNpmTasks );
 
-	grunt.registerTask( 'default', [ 'jshint', 'json_minification' ] );
+	grunt.registerTask( 'default', [ 'jshint', 'jsonlint:manifest', 'json_minification', 'jsonlint:min' ] );
+	grunt.registerTask( 'check',   [ 'devUpdate' ] );
 
 };

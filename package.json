@@ -2,10 +2,11 @@
   "name": "wp-themes",
   "repository": "godaddy/wp-themes",
   "devDependencies": {
-    "grunt": "^0.4.5",
+    "grunt": "^1.0.1",
     "grunt-contrib-jshint": "^1.1.0",
     "grunt-dev-update": "^2.0.0",
     "grunt-json-minification": "^0.1.1",
+    "grunt-jsonlint": "^1.1.0",
     "matchdep": "^1.0.1"
   }
 }

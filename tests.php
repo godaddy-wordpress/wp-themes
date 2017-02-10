@@ -10,8 +10,8 @@ class Tests extends TestCase
 
 	public function testFilesExist()
 	{
-		$this->assertTrue( is_readable( self::$manifest ) );
-		$this->assertTrue( is_readable( self::$manifest_min ) );
+		$this->assertTrue( is_readable( self::$manifest ), 'Manifest file is not readable' );
+		$this->assertTrue( is_readable( self::$manifest_min ), 'Minified manifest file is not readable' );
 	}
 
 	public function testFileContents()
@@ -19,15 +19,15 @@ class Tests extends TestCase
 		$json     = (string) file_get_contents( self::$manifest );
 		$json_min = (string) file_get_contents( self::$manifest_min );
 
-		$this->assertJson( $json );
-		$this->assertJson( $json_min );
+		$this->assertJson( $json, 'Manifest is not valid JSON' );
+		$this->assertJson( $json_min, 'Minified manifest is not valid JSON' );
 
 		$manifest     = json_decode( $json, true );
 		$manifest_min = json_decode( $json_min, true );
 
-		$this->assertNotEmpty( $manifest );
-		$this->assertNotEmpty( $manifest_min );
-		$this->assertTrue( $manifest === $manifest_min );
+		$this->assertNotEmpty( $manifest, 'Manifest is empty' );
+		$this->assertNotEmpty( $manifest_min, 'Minified manifest is empty' );
+		$this->assertTrue( $manifest === $manifest_min, 'Manifests do not match' );
 
 		self::$themes = $manifest;
 	}
@@ -35,40 +35,40 @@ class Tests extends TestCase
 	public function testThemeData()
 	{
 		array_walk( self::$themes, function ( $data ) {
-			$this->assertTrue( is_array( $data ) );
-			$this->assertCount( 4, $data );
+			$this->assertTrue( is_array( $data ), 'Theme data is not an array' );
+			$this->assertCount( 4, $data, 'Theme data array does not contain exactly 4 items' );
 
-			$this->assertNotEmpty( $data['theme'] );
-			$this->assertTrue( ctype_lower( str_replace( '-', '', $data['theme'] ) ) );
+			$this->assertNotEmpty( $data['theme'], 'Theme slug does not exist' );
+			$this->assertTrue( ctype_lower( str_replace( '-', '', $data['theme'] ) ), 'Theme slug is not lowercase' );
 
-			$this->assertNotEmpty( $data['new_version'] );
-			$this->assertRegExp( '/^([\w\.\-]+)$/', $data['new_version'] );
+			$this->assertNotEmpty( $data['new_version'], 'Theme version does not exist' );
+			$this->assertRegExp( '/^([\w\.\-]+)$/', $data['new_version'], 'Theme version format is invalid' );
 
-			$this->assertNotEmpty( $data['url'] );
-			$this->assertRegExp( '/^(https?):\/\/[^\s\/$.?#].[^\s]*$/i', $data['url'] );
-			$this->assertContains( $data['theme'], $data['url'] );
+			$this->assertNotEmpty( $data['url'], 'Theme URL does not exist' );
+			$this->assertRegExp( '/^(https?):\/\/[^\s\/$.?#].[^\s]*$/i', $data['url'], 'Theme URL format is invalid' );
+			$this->assertContains( $data['theme'], $data['url'], 'Theme URL does not contain the theme slug' );
 
-			$this->assertNotEmpty( $data['package'] );
-			$this->assertRegExp( '/^(https?):\/\/[^\s\/$.?#].[^\s]*$/i', $data['package'] );
-			$this->assertContains( "/godaddy/wp-{$data['theme']}-theme/", $data['package'] );
-			$this->assertContains( "/v{$data['new_version']}/", $data['package'] );
-			$this->assertStringEndsWith( "/{$data['theme']}.zip", $data['package'] );
+			$this->assertNotEmpty( $data['package'], 'Theme package URL does not exist' );
+			$this->assertRegExp( '/^(https?):\/\/[^\s\/$.?#].[^\s]*$/i', $data['package'], 'Theme package URL format is invalid' );
+			$this->assertContains( "/godaddy/wp-{$data['theme']}-theme/", $data['package'], 'Theme package URL does not contain the theme repo' );
+			$this->assertContains( "/v{$data['new_version']}/", $data['package'], 'Theme package URL does not contain the theme version' );
+			$this->assertStringEndsWith( "/{$data['theme']}.zip", $data['package'], 'Theme package URL does not point to a ZIP file of the theme slug' );
 		} );
 	}
 
-	public function testUrlsExist()
+	public function testUrlsReachable()
 	{
 		array_walk( self::$themes, function ( $data ) {
-			$response = get_headers( $data['url'] );
-			$this->assertContains( '200 OK', $response[0] );
+			$headers = get_headers( $data['url'] );
+			$this->assertContains( '200 OK', $headers[0], 'Theme URL is unreachable' );
 		} );
 	}
 
-	public function testPackgesExist()
+	public function testPackgesReachable()
 	{
 		array_walk( self::$themes, function ( $data ) {
-			$response = get_headers( $data['package'] );
-			$this->assertContains( '302 Found', $response[0] );
+			$headers = get_headers( $data['package'] );
+			$this->assertContains( '302 Found', $headers[0], 'Theme package URL is unreachable' );
 		} );
 	}
 }
