@@ -34,7 +34,7 @@ module.exports = function( grunt ) {
 			manifest: {
 				src: [ 'manifest.json' ]
 			},
-			manifest_min: {
+			min: {
 				src: [ 'manifest.min.json' ]
 			}
 		},
@@ -51,7 +51,7 @@ module.exports = function( grunt ) {
 
 	require( 'matchdep' ).filterDev( 'grunt-*' ).forEach( grunt.loadNpmTasks );
 
-	grunt.registerTask( 'default', [ 'jshint', 'jsonlint:manifest', 'json_minification', 'jsonlint:manifest_min' ] );
+	grunt.registerTask( 'default', [ 'jshint', 'jsonlint:manifest', 'json_minification', 'jsonlint:min' ] );
 	grunt.registerTask( 'check',   [ 'devUpdate' ] );
 
 };
