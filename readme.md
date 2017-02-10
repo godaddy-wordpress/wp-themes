@@ -6,6 +6,6 @@ Manifest of all WordPress Themes created by GoDaddy.
 
 1. Clone this repo
 2. Run `cp pre-commit .git/hooks/pre-commit`
-3. Make changes to `manifest.json`
+3. Make changes to `manifest.json` on `develop`
 4. Commit and push
 5. Issue a PR against `master` (requires peer approval to merge)
