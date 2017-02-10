@@ -1,6 +1,8 @@
 <?php
 
-class Tests extends PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class Tests extends TestCase
 {
 	public static $manifest     = __DIR__ . '/manifest.json';
 	public static $manifest_min = __DIR__ . '/manifest.min.json';
@@ -57,31 +59,16 @@ class Tests extends PHPUnit_Framework_TestCase
 	public function testUrlsExist()
 	{
 		array_walk( self::$themes, function ( $data ) {
-			$this->assertContains( '200 OK', $this->getHeaderResponse( $data['url'] ) );
+			$response = get_headers( $data['url'] );
+			$this->assertContains( '200 OK', $response[0] );
 		} );
 	}
 
 	public function testPackgesExist()
 	{
 		array_walk( self::$themes, function ( $data ) {
-			$this->assertContains( '302 Found', $this->getHeaderResponse( $data['package'] ) );
+			$response = get_headers( $data['package'] );
+			$this->assertContains( '302 Found', $response[0] );
 		} );
-	}
-
-	protected function getHeaderResponse( $url )
-	{
-		$ch = curl_init();
-
-		curl_setopt( $ch, CURLOPT_URL, $url );
-		curl_setopt( $ch, CURLOPT_HEADER, true );
-		curl_setopt( $ch, CURLOPT_NOBODY, true );
-		curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
-		curl_setopt( $ch, CURLOPT_TIMEOUT, 5 );
-
-		$headers = explode( "\n", curl_exec( $ch ) );
-
-		curl_close( $ch );
-
-		return $headers[0];
 	}
 }
