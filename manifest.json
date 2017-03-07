@@ -31,9 +31,9 @@
   },
   {
     "theme": "primer",
-    "new_version": "1.5.1",
+    "new_version": "1.6.0",
     "url": "http://wpnux.godaddy.com/?theme=primer",
-    "package": "https://github.com/godaddy/wp-primer-theme/releases/download/v1.5.1/primer.zip"
+    "package": "https://github.com/godaddy/wp-primer-theme/releases/download/v1.6.0/primer.zip"
   },
   {
     "theme": "scribbles",
