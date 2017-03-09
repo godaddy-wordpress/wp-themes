@@ -4,69 +4,69 @@
     "new_version": "1.1.1",
     "url": "http://wpnux.godaddy.com/?theme=activation",
     "package": "https://github.com/godaddy/wp-activation-theme/releases/download/v1.1.1/activation.zip",
-    "screenshot": "https://raw.githubusercontent.com/godaddy/wp-activation-theme/develop/screenshot.png"
+    "screenshot": "https://raw.githubusercontent.com/godaddy/wp-activation-theme/master/screenshot.png"
   },
   {
     "theme": "ascension",
     "new_version": "1.0.1",
     "url": "http://wpnux.godaddy.com/?theme=ascension",
     "package": "https://github.com/godaddy/wp-ascension-theme/releases/download/v1.0.1/ascension.zip",
-    "screenshot": "https://raw.githubusercontent.com/godaddy/wp-ascension-theme/develop/screenshot.png"
+    "screenshot": "https://raw.githubusercontent.com/godaddy/wp-ascension-theme/master/screenshot.png"
   },
   {
     "theme": "escapade",
     "new_version": "1.0.1",
     "url": "http://wpnux.godaddy.com/?theme=escapade",
     "package": "https://github.com/godaddy/wp-escapade-theme/releases/download/v1.0.1/escapade.zip",
-    "screenshot": "https://raw.githubusercontent.com/godaddy/wp-escapade-theme/develop/screenshot.png"
+    "screenshot": "https://raw.githubusercontent.com/godaddy/wp-escapade-theme/master/screenshot.png"
   },
   {
     "theme": "lyrical",
     "new_version": "1.0.0",
     "url": "http://wpnux.godaddy.com/?theme=lyrical",
     "package": "https://github.com/godaddy/wp-lyrical-theme/releases/download/v1.0.0/lyrical.zip",
-    "screenshot": "https://raw.githubusercontent.com/godaddy/wp-lyrical-theme/develop/screenshot.png"
+    "screenshot": "https://raw.githubusercontent.com/godaddy/wp-lyrical-theme/master/screenshot.png"
   },
   {
     "theme": "mins",
     "new_version": "1.0.1",
     "url": "http://wpnux.godaddy.com/?theme=mins",
     "package": "https://github.com/godaddy/wp-mins-theme/releases/download/v1.0.1/mins.zip",
-    "screenshot": "https://raw.githubusercontent.com/godaddy/wp-mins-theme/develop/screenshot.png"
+    "screenshot": "https://raw.githubusercontent.com/godaddy/wp-mins-theme/master/screenshot.png"
   },
   {
     "theme": "primer",
     "new_version": "1.6.0",
     "url": "http://wpnux.godaddy.com/?theme=primer",
     "package": "https://github.com/godaddy/wp-primer-theme/releases/download/v1.6.0/primer.zip",
-    "screenshot": "https://raw.githubusercontent.com/godaddy/wp-primer-theme/develop/screenshot.png"
+    "screenshot": "https://raw.githubusercontent.com/godaddy/wp-primer-theme/master/screenshot.png"
   },
   {
     "theme": "scribbles",
     "new_version": "1.0.0",
     "url": "http://wpnux.godaddy.com/?theme=scribbles",
     "package": "https://github.com/godaddy/wp-scribbles-theme/releases/download/v1.0.0/scribbles.zip",
-    "screenshot": "https://raw.githubusercontent.com/godaddy/wp-scribbles-theme/develop/screenshot.png"
+    "screenshot": "https://raw.githubusercontent.com/godaddy/wp-scribbles-theme/master/screenshot.png"
   },
   {
     "theme": "stout",
     "new_version": "1.0.0",
     "url": "http://wpnux.godaddy.com/?theme=stout",
     "package": "https://github.com/godaddy/wp-stout-theme/releases/download/v1.0.0/stout.zip",
-    "screenshot": "https://raw.githubusercontent.com/godaddy/wp-stout-theme/develop/screenshot.png"
+    "screenshot": "https://raw.githubusercontent.com/godaddy/wp-stout-theme/master/screenshot.png"
   },
   {
     "theme": "uptown-style",
     "new_version": "1.0.0",
     "url": "http://wpnux.godaddy.com/?theme=uptown-style",
     "package": "https://github.com/godaddy/wp-uptown-style-theme/releases/download/v1.0.0/uptown-style.zip",
-    "screenshot": "https://raw.githubusercontent.com/godaddy/wp-uptown-style-theme/develop/screenshot.png"
+    "screenshot": "https://raw.githubusercontent.com/godaddy/wp-uptown-style-theme/master/screenshot.png"
   },
   {
     "theme": "velux",
     "new_version": "1.0.0",
     "url": "http://wpnux.godaddy.com/?theme=velux",
     "package": "https://github.com/godaddy/wp-velux-theme/releases/download/v1.0.0/velux.zip",
-    "screenshot": "https://raw.githubusercontent.com/godaddy/wp-velux-theme/develop/screenshot.png"
+    "screenshot": "https://raw.githubusercontent.com/godaddy/wp-velux-theme/master/screenshot.png"
   }
 ]
