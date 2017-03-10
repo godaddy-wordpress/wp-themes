@@ -1,2 +1,2 @@
-npm install && grunt
+npm install -s && grunt
 composer update && ./vendor/bin/phpunit --colors tests.php
