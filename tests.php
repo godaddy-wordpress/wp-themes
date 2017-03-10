@@ -36,7 +36,7 @@ class Tests extends TestCase
 	{
 		array_walk( self::$themes, function ( $data ) {
 			$this->assertTrue( is_array( $data ), 'Theme data is not an array' );
-			$this->assertCount( 4, $data, 'Theme data array does not contain exactly 4 items' );
+			$this->assertCount( 6, $data, 'Theme data array does not contain exactly 6 items' );
 
 			$this->assertNotEmpty( $data['theme'], 'Theme slug does not exist' );
 			$this->assertTrue( ctype_lower( str_replace( '-', '', $data['theme'] ) ), 'Theme slug is not lowercase' );
@@ -53,6 +53,14 @@ class Tests extends TestCase
 			$this->assertContains( "/godaddy/wp-{$data['theme']}-theme/", $data['package'], 'Theme package URL does not contain the theme repo' );
 			$this->assertContains( "/v{$data['new_version']}/", $data['package'], 'Theme package URL does not contain the theme version' );
 			$this->assertStringEndsWith( "/{$data['theme']}.zip", $data['package'], 'Theme package URL does not point to a ZIP file of the theme slug' );
+
+			$this->assertNotEmpty( $data['screenshot'], 'Theme screenshot URL does not exist' );
+			$this->assertRegExp( '/^(https?):\/\/[^\s\/$.?#].[^\s]*$/i', $data['screenshot'], 'Theme screenshot URL format is invalid' );
+			$this->assertContains( "/v{$data['new_version']}/", $data['screenshot'], 'Theme screenshot URL does not contain the theme version' );
+			$this->assertStringEndsWith( "/screenshot.png", $data['screenshot'], 'Theme screenshot URL does not point to a `screenshot.png` file' );
+
+			$this->assertNotEmpty( $data['name'], 'Theme name does not exist' );
+			$this->assertEquals( strtolower( str_replace( ' ', '-', $data['name'] ) ), $data['theme'], 'Theme name and slug are not similar' );
 		} );
 	}
 
@@ -69,6 +77,14 @@ class Tests extends TestCase
 		array_walk( self::$themes, function ( $data ) {
 			$headers = get_headers( $data['package'] );
 			$this->assertContains( '302 Found', $headers[0], 'Theme package URL is unreachable' );
+		} );
+	}
+
+	public function testScreenshotsReachable()
+	{
+		array_walk( self::$themes, function ( $data ) {
+			$headers = get_headers( $data['screenshot'] );
+			$this->assertContains( '200 OK', $headers[0], 'Theme screenshot URL is unreachable' );
 		} );
 	}
 }
