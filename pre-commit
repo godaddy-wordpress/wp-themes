@@ -1,2 +1,3 @@
 npm install -s && grunt
+git add manifest.min.json
 composer update && ./vendor/bin/phpunit --colors tests.php
