@@ -2,7 +2,7 @@
   {
     "theme": "activation",
     "new_version": "1.1.1",
-    "url": "http://wpnux.godaddy.com/?theme=activation",
+    "url": "https://wpnux.godaddy.com/?theme=activation",
     "package": "https://github.com/godaddy/wp-activation-theme/releases/download/v1.1.1/activation.zip",
     "screenshot": "https://raw.githubusercontent.com/godaddy/wp-activation-theme/v1.1.1/screenshot.png",
     "name": "Activation"
@@ -10,7 +10,7 @@
   {
     "theme": "ascension",
     "new_version": "1.0.1",
-    "url": "http://wpnux.godaddy.com/?theme=ascension",
+    "url": "https://wpnux.godaddy.com/?theme=ascension",
     "package": "https://github.com/godaddy/wp-ascension-theme/releases/download/v1.0.1/ascension.zip",
     "screenshot": "https://raw.githubusercontent.com/godaddy/wp-ascension-theme/v1.0.1/screenshot.png",
     "name": "Ascension"
@@ -18,7 +18,7 @@
   {
     "theme": "escapade",
     "new_version": "1.0.1",
-    "url": "http://wpnux.godaddy.com/?theme=escapade",
+    "url": "https://wpnux.godaddy.com/?theme=escapade",
     "package": "https://github.com/godaddy/wp-escapade-theme/releases/download/v1.0.1/escapade.zip",
     "screenshot": "https://raw.githubusercontent.com/godaddy/wp-escapade-theme/v1.0.1/screenshot.png",
     "name": "Escapade"
@@ -26,7 +26,7 @@
   {
     "theme": "lyrical",
     "new_version": "1.0.0",
-    "url": "http://wpnux.godaddy.com/?theme=lyrical",
+    "url": "https://wpnux.godaddy.com/?theme=lyrical",
     "package": "https://github.com/godaddy/wp-lyrical-theme/releases/download/v1.0.0/lyrical.zip",
     "screenshot": "https://raw.githubusercontent.com/godaddy/wp-lyrical-theme/v1.0.0/screenshot.png",
     "name": "Lyrical"
@@ -34,7 +34,7 @@
   {
     "theme": "mins",
     "new_version": "1.0.1",
-    "url": "http://wpnux.godaddy.com/?theme=mins",
+    "url": "https://wpnux.godaddy.com/?theme=mins",
     "package": "https://github.com/godaddy/wp-mins-theme/releases/download/v1.0.1/mins.zip",
     "screenshot": "https://raw.githubusercontent.com/godaddy/wp-mins-theme/v1.0.1/screenshot.png",
     "name": "Mins"
@@ -42,7 +42,7 @@
   {
     "theme": "primer",
     "new_version": "1.6.0",
-    "url": "http://wpnux.godaddy.com/?theme=primer",
+    "url": "https://wpnux.godaddy.com/?theme=primer",
     "package": "https://github.com/godaddy/wp-primer-theme/releases/download/v1.6.0/primer.zip",
     "screenshot": "https://raw.githubusercontent.com/godaddy/wp-primer-theme/v1.6.0/screenshot.png",
     "name": "Primer"
@@ -50,7 +50,7 @@
   {
     "theme": "scribbles",
     "new_version": "1.0.0",
-    "url": "http://wpnux.godaddy.com/?theme=scribbles",
+    "url": "https://wpnux.godaddy.com/?theme=scribbles",
     "package": "https://github.com/godaddy/wp-scribbles-theme/releases/download/v1.0.0/scribbles.zip",
     "screenshot": "https://raw.githubusercontent.com/godaddy/wp-scribbles-theme/v1.0.0/screenshot.png",
     "name": "Scribbles"
@@ -58,7 +58,7 @@
   {
     "theme": "stout",
     "new_version": "1.0.0",
-    "url": "http://wpnux.godaddy.com/?theme=stout",
+    "url": "https://wpnux.godaddy.com/?theme=stout",
     "package": "https://github.com/godaddy/wp-stout-theme/releases/download/v1.0.0/stout.zip",
     "screenshot": "https://raw.githubusercontent.com/godaddy/wp-stout-theme/v1.0.0/screenshot.png",
     "name": "Stout"
@@ -66,7 +66,7 @@
   {
     "theme": "uptown-style",
     "new_version": "1.0.0",
-    "url": "http://wpnux.godaddy.com/?theme=uptown-style",
+    "url": "https://wpnux.godaddy.com/?theme=uptown-style",
     "package": "https://github.com/godaddy/wp-uptown-style-theme/releases/download/v1.0.0/uptown-style.zip",
     "screenshot": "https://raw.githubusercontent.com/godaddy/wp-uptown-style-theme/v1.0.0/screenshot.png",
     "name": "Uptown Style"
@@ -74,7 +74,7 @@
   {
     "theme": "velux",
     "new_version": "1.0.0",
-    "url": "http://wpnux.godaddy.com/?theme=velux",
+    "url": "https://wpnux.godaddy.com/?theme=velux",
     "package": "https://github.com/godaddy/wp-velux-theme/releases/download/v1.0.0/velux.zip",
     "screenshot": "https://raw.githubusercontent.com/godaddy/wp-velux-theme/v1.0.0/screenshot.png",
     "name": "Velux"
