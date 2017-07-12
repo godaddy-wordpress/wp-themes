@@ -41,10 +41,10 @@
   },
   {
     "theme": "primer",
-    "new_version": "1.7.0",
+    "new_version": "1.8.0",
     "url": "https://wpnux.godaddy.com/?theme=primer",
-    "package": "https://github.com/godaddy/wp-primer-theme/releases/download/v1.7.0/primer.zip",
-    "screenshot": "https://raw.githubusercontent.com/godaddy/wp-primer-theme/v1.7.0/screenshot.png",
+    "package": "https://github.com/godaddy/wp-primer-theme/releases/download/v1.8.0/primer.zip",
+    "screenshot": "https://raw.githubusercontent.com/godaddy/wp-primer-theme/v1.8.0/screenshot.png",
     "name": "Primer"
   },
   {
