@@ -1,18 +1,18 @@
 [
   {
     "theme": "activation",
-    "new_version": "1.1.1",
+    "new_version": "1.2.0",
     "url": "https://wpnux.godaddy.com/?theme=activation",
-    "package": "https://github.com/godaddy/wp-activation-theme/releases/download/v1.1.1/activation.zip",
-    "screenshot": "https://raw.githubusercontent.com/godaddy/wp-activation-theme/v1.1.1/screenshot.png",
+    "package": "https://github.com/godaddy/wp-activation-theme/releases/download/v1.2.0/activation.zip",
+    "screenshot": "https://raw.githubusercontent.com/godaddy/wp-activation-theme/v1.2.0/screenshot.png",
     "name": "Activation"
   },
   {
     "theme": "ascension",
-    "new_version": "1.1.0",
+    "new_version": "1.1.1",
     "url": "https://wpnux.godaddy.com/?theme=ascension",
-    "package": "https://github.com/godaddy/wp-ascension-theme/releases/download/v1.1.0/ascension.zip",
-    "screenshot": "https://raw.githubusercontent.com/godaddy/wp-ascension-theme/v1.1.0/screenshot.png",
+    "package": "https://github.com/godaddy/wp-ascension-theme/releases/download/v1.1.1/ascension.zip",
+    "screenshot": "https://raw.githubusercontent.com/godaddy/wp-ascension-theme/v1.1.1/screenshot.png",
     "name": "Ascension"
   },
   {
@@ -25,10 +25,10 @@
   },
   {
     "theme": "lyrical",
-    "new_version": "1.1.0",
+    "new_version": "1.1.1",
     "url": "https://wpnux.godaddy.com/?theme=lyrical",
-    "package": "https://github.com/godaddy/wp-lyrical-theme/releases/download/v1.1.0/lyrical.zip",
-    "screenshot": "https://raw.githubusercontent.com/godaddy/wp-lyrical-theme/v1.1.0/screenshot.png",
+    "package": "https://github.com/godaddy/wp-lyrical-theme/releases/download/v1.1.1/lyrical.zip",
+    "screenshot": "https://raw.githubusercontent.com/godaddy/wp-lyrical-theme/v1.1.1/screenshot.png",
     "name": "Lyrical"
   },
   {
@@ -41,10 +41,10 @@
   },
   {
     "theme": "primer",
-    "new_version": "1.8.0",
+    "new_version": "1.8.1",
     "url": "https://wpnux.godaddy.com/?theme=primer",
-    "package": "https://github.com/godaddy/wp-primer-theme/releases/download/v1.8.0/primer.zip",
-    "screenshot": "https://raw.githubusercontent.com/godaddy/wp-primer-theme/v1.8.0/screenshot.png",
+    "package": "https://github.com/godaddy/wp-primer-theme/releases/download/v1.8.1/primer.zip",
+    "screenshot": "https://raw.githubusercontent.com/godaddy/wp-primer-theme/v1.8.1/screenshot.png",
     "name": "Primer"
   },
   {
@@ -73,10 +73,10 @@
   },
   {
     "theme": "velux",
-    "new_version": "1.1.0",
+    "new_version": "1.1.1",
     "url": "https://wpnux.godaddy.com/?theme=velux",
-    "package": "https://github.com/godaddy/wp-velux-theme/releases/download/v1.1.0/velux.zip",
-    "screenshot": "https://raw.githubusercontent.com/godaddy/wp-velux-theme/v1.1.0/screenshot.png",
+    "package": "https://github.com/godaddy/wp-velux-theme/releases/download/v1.1.1/velux.zip",
+    "screenshot": "https://raw.githubusercontent.com/godaddy/wp-velux-theme/v1.1.1/screenshot.png",
     "name": "Velux"
   }
 ]
