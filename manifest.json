@@ -1,10 +1,10 @@
 [
   {
     "theme": "activation",
-    "new_version": "1.2.1",
+    "new_version": "1.2.2",
     "url": "https://wpnux.godaddy.com/?theme=activation",
-    "package": "https://github.com/godaddy/wp-activation-theme/releases/download/v1.2.1/activation.zip",
-    "screenshot": "https://raw.githubusercontent.com/godaddy/wp-activation-theme/v1.2.1/screenshot.png",
+    "package": "https://github.com/godaddy/wp-activation-theme/releases/download/v1.2.2/activation.zip",
+    "screenshot": "https://raw.githubusercontent.com/godaddy/wp-activation-theme/v1.2.2/screenshot.png",
     "name": "Activation"
   },
   {
