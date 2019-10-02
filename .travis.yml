@@ -7,7 +7,6 @@ notifications:
 
 cache:
   directories:
-    - node_modules
     - vendor
     - $HOME/.composer/cache
 
