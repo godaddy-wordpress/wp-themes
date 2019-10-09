@@ -1,8 +1,23 @@
+sudo: false
+
+notifications:
+  email:
+    on_success: never
+    on_failure: never
+
+cache:
+  directories:
+    - vendor
+    - $HOME/.composer/cache
+
 language:
   - php
 
 php:
-  - 7.1
+  - 7.3
+
+before_install:
+  - phpenv config-rm xdebug.ini
 
 script:
   - phpunit --colors tests.php
