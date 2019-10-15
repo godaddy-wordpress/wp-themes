@@ -81,10 +81,10 @@
   },
   {
     "theme": "go",
-    "new_version": "1.1.0",
+    "new_version": "1.1.1",
     "url": "https://wpnux.godaddy.com/v2/",
-    "package": "https://github.com/godaddy-wordpress/go/releases/download/1.1.0/go.zip",
-    "screenshot": "https://raw.githubusercontent.com/godaddy-wordpress/go/1.1.0/screenshot.png",
+    "package": "https://github.com/godaddy-wordpress/go/releases/download/1.1.1/go.zip",
+    "screenshot": "https://raw.githubusercontent.com/godaddy-wordpress/go/1.1.1/screenshot.png",
     "name": "Go"
   }
 ]
