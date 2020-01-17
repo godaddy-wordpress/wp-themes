@@ -58,7 +58,7 @@ class Tests extends TestCase
 
 		$this->assertNotEmpty( $data['package'], 'Theme package URL does not exist' );
 		$this->assertRegExp( '/^(https):\/\/[^\s\/$.?#].[^\s]*$/i', $data['package'], 'Theme package URL format is invalid' );
-		$this->assertRegExp( sprintf( '/(wordpress\.org\/theme\/%1$s\.%2$s\.zip|releases\/download\/%2$s\/%1$s\.zip)$/i', preg_quote( $data['theme'] ), preg_quote( $data['new_version'] ) ), $data['package'], 'Theme package URL does not point to a versioned ZIP file of the theme slug' );
+		$this->assertRegExp( sprintf( '/wordpress\.org\/theme\/%s\.%s\.zip$/i', preg_quote( $data['theme'] ), preg_quote( $data['new_version'] ) ), $data['package'], 'Theme package URL does not point to a versioned ZIP file of the theme slug' );
 
 		$this->assertNotEmpty( $data['screenshot'], 'Theme screenshot URL does not exist' );
 		$this->assertRegExp( '/^(https):\/\/[^\s\/$.?#].[^\s]*$/i', $data['screenshot'], 'Theme screenshot URL format is invalid' );

@@ -25,10 +25,10 @@
   },
   {
     "theme": "go",
-    "new_version": "1.2.1",
+    "new_version": "1.2.3",
     "url": "https://wpnux.godaddy.com/v2/?template=keynote",
-    "package": "https://github.com/godaddy-wordpress/go/releases/download/1.2.1/go.zip",
-    "screenshot": "https://raw.githubusercontent.com/godaddy-wordpress/go/1.2.1/screenshot.png",
+    "package": "https://downloads.wordpress.org/theme/go.1.2.3.zip",
+    "screenshot": "https://i0.wp.com/themes.svn.wordpress.org/go/1.2.3/screenshot.png",
     "name": "Go"
   },
   {
