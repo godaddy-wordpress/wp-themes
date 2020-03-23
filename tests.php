@@ -44,7 +44,6 @@ class Tests extends TestCase
 	 */
 	public function testThemeData( $data )
 	{
-		print_r( $data );
 		$this->assertTrue( is_array( $data ), 'Theme data is not an array' );
 		$this->assertCount( 6, $data, 'Theme data array does not contain exactly 6 items' );
 
