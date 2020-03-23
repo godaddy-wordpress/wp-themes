@@ -44,6 +44,7 @@ class Tests extends TestCase
 	 */
 	public function testThemeData( $data )
 	{
+		print_r( $data );
 		$this->assertTrue( is_array( $data ), 'Theme data is not an array' );
 		$this->assertCount( 6, $data, 'Theme data array does not contain exactly 6 items' );
 
@@ -58,7 +59,13 @@ class Tests extends TestCase
 
 		$this->assertNotEmpty( $data['package'], 'Theme package URL does not exist' );
 		$this->assertRegExp( '/^(https):\/\/[^\s\/$.?#].[^\s]*$/i', $data['package'], 'Theme package URL format is invalid' );
-		$this->assertRegExp( sprintf( '/wordpress\.org\/theme\/%s\.%s\.zip$/i', preg_quote( $data['theme'] ), preg_quote( $data['new_version'] ) ), $data['package'], 'Theme package URL does not point to a versioned ZIP file of the theme slug' );
+
+		// Try for a versioned file, or latest-stable.zip
+		try {
+			$this->assertRegExp( sprintf( '/wordpress\.org\/theme\/%s\.%s\.zip$/i', preg_quote( $data['theme'] ), preg_quote( $data['new_version'] ) ), $data['package'], 'Theme package URL does not point to a versioned ZIP file of the theme slug' );
+		} catch (\Exception $ex) {
+			$this->assertRegExp( sprintf( '/wordpress\.org\/theme\/%s\.latest-stable\.zip$/i', preg_quote( $data['theme'] ) ), $data['package'], 'Theme package URL does not point to a versioned ZIP file of the theme slug' );
+		}
 
 		$this->assertNotEmpty( $data['screenshot'], 'Theme screenshot URL does not exist' );
 		$this->assertRegExp( '/^(https):\/\/[^\s\/$.?#].[^\s]*$/i', $data['screenshot'], 'Theme screenshot URL format is invalid' );
