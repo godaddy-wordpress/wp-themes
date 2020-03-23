@@ -63,7 +63,7 @@ class Tests extends TestCase
 		// Try for a versioned file, or latest-stable.zip
 		try {
 			$this->assertRegExp( sprintf( '/wordpress\.org\/theme\/%s\.%s\.zip$/i', preg_quote( $data['theme'] ), preg_quote( $data['new_version'] ) ), $data['package'], 'Theme package URL does not point to a versioned ZIP file of the theme slug' );
-		} catch (\Exception $ex) {
+		} catch ( \Exception $exception ) {
 			$this->assertRegExp( sprintf( '/wordpress\.org\/theme\/%s\.latest-stable\.zip$/i', preg_quote( $data['theme'] ) ), $data['package'], 'Theme package URL does not point to a versioned ZIP file of the theme slug' );
 		}
 
